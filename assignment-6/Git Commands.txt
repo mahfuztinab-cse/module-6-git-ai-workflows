@@ -1,0 +1,108 @@
+# Git Commands Cheat Sheet
+**Author:** Mahfuz Tinab
+
+## 🔧 Setup & Configuration
+
+```bash
+# Set user name
+git config --global user.name "Mahfuz Tinab"
+
+# Set email
+git config --global user.email "mahfuztinab780@gmail.com"
+
+# Check configuration
+git config --list
+git config --list --show-origin
+
+Repository Basics:
+
+# Initialize new repo
+git init
+
+# Clone existing repo
+git clone <url>
+
+# Check status
+git status
+
+# See commit history
+git log --oneline
+git log --graph --oneline --all
+
+Making Changes:
+
+# Stage files
+git add <file>
+git add .              # all files
+
+# Commit
+git commit -m "message"
+
+# Stage + commit in one step
+git commit -am "message"
+
+Branching:
+
+# List branches
+git branch
+
+# Create branch
+git branch <name>
+
+# Switch branch
+git checkout <name>
+git switch <name>
+
+# Create + switch
+git checkout -b <name>
+git switch -c <name>
+
+# Merge branch
+git merge <name>
+
+# Delete branch
+git branch -d <name>
+
+Remote (GitHub):
+
+# Add remote
+git remote add origin <url>
+
+# View remotes
+git remote -v
+
+# Push
+git push origin main
+git push -u origin main   # first time
+
+# Pull
+git pull origin main
+
+# Fetch
+git fetch origin
+
+Undoing Changes:
+
+# Unstage file
+git restore --staged <file>
+
+# Discard changes
+git restore <file>
+
+# Undo last commit (keep changes)
+git reset --soft HEAD~1
+
+# Undo last commit (discard changes)
+git reset --hard HEAD~1
+
+Inspecting:
+
+# See differences
+git diff
+git diff --staged
+
+# See specific commit
+git show <commit-hash>
+
+# Who changed what
+git blame <file>
